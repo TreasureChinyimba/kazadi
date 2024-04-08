@@ -85,18 +85,18 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav  ">
+              <ul class="navbar-nav">
                 <li class="nav-item active">
-                  <a class="nav-link" href="#index">Home <span class="sr-only">(current)</span></a>
+                  <a class="nav-link" href="#index">Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#about"> About</a>
+                  <a class="nav-link" href="#about">About Us</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#service">Services</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="blog.html"> Blog </a>
+                  <a class="nav-link" href="blog.html">Blog</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#contact">Contact Us</a>
@@ -109,7 +109,7 @@
     </header>
     <!-- end header section -->
     <!-- slider section -->
-    <section class="slider_section ">
+    <section class="slider_section " id="home">
       <div id="customCarousel1" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -144,7 +144,7 @@
   </div>
   <!-- about section -->
 
-  <section class="about_section">
+  <section class="about_section" id="about">
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-5 offset-md-1">
@@ -183,7 +183,7 @@ Join us on this journey as we celebrate the diversity of musical expression and 
 
   <!-- service section -->
 
-  <section class="service_section layout_padding">
+  <section class="service_section layout_padding" id="services">
     <div class="container">
       <div class="heading_container heading_center ">
         <h2 class="">
@@ -302,13 +302,13 @@ Join us on this journey as we celebrate the diversity of musical expression and 
 
  
   <!-- contact section -->
-  <section class="contact_section ">
+  <section class="contact_section " id="contact">
     <div class="container-fluid">
 
       <div class="row">
         <div class="col-md-6 px-0">
           <div class="img-box ">
-            <img src="images/birth.jpg" class="box_img" alt="about img">
+            <img src="images/ano.png" class="box_img" alt="about img">
           </div>
         </div>
         <div class="col-md-5 mx-auto">
@@ -487,6 +487,27 @@ Join us on this journey as we celebrate the diversity of musical expression and 
     </div>
   </footer>
   <!-- footer section -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const links = document.querySelectorAll('.nav-link');
+      links.forEach(link => {
+        link.addEventListener('click', smoothScroll);
+      });
+    
+      function smoothScroll(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          const offsetTop = targetElement.offsetTop;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+    </script>
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
