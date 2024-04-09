@@ -159,12 +159,7 @@
 
 Our mission is simple yet profound: to foster a community where artists can unleash their creativity and produce music that not only captivates audiences but also leaves a lasting impact. We believe that music has the power to inspire, uplift, and provoke change, and we are committed to supporting artists who share this vision.
 
-Whether it's soulful melodies that touch the heart or powerful lyrics that challenge the status quo, Kazadi Music is here to amplify voices that deserve to be heard. We strive to cultivate an environment that encourages artistic exploration and innovation, where artists are free to push boundaries and defy conventions.
-
-At Kazadi Music, we don't just release songs; we cultivate experiences that resonate deeply with listeners. Every track we promote is carefully curated to reflect our values of authenticity, integrity, and creativity. We believe in the transformative power of music to spark conversations, evoke emotions, and inspire action.
-
-Join us on this journey as we celebrate the diversity of musical expression and harness the power of music to make a positive impact on the world. Together, let's create something truly extraordinary—a world where music not only entertains but also enlightens, empowers, and enriches lives. Welcome to Kazadi Music, where music meets meaning and purpose.
-            </p>
+Whether it's soulful melodies that touch the heart or powerful lyrics that ....          </p>
             <a href="about.html" class="">
               Read More
             </a>
@@ -290,8 +285,8 @@ Join us on this journey as we celebrate the diversity of musical expression and 
         </div>
       </div>
       <div class="btn-box">
-        <a href="">
-          Read More
+        <a href="#contact">
+          Contact us
         </a>
       </div>
     </div>
@@ -319,12 +314,12 @@ Join us on this journey as we celebrate the diversity of musical expression and 
             <form action="">
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="form-control" placeholder="Your Name" />
+                  <input type="text" class="form-control" placeholder="Your Name" required/>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col-lg-6">
-                  <input type="text" class="form-control" placeholder="Phone Number" />
+                  <input type="text" class="form-control" placeholder="Phone Number" required/>
                 </div>
                 <div class="form-group col-lg-6">
                   <select name="" id="" class="form-control wide">
@@ -338,16 +333,16 @@ Join us on this journey as we celebrate the diversity of musical expression and 
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="email" class="form-control" placeholder="Email" />
+                  <input type="email" class="form-control" placeholder="Email" required/>
                 </div>
               </div>
               <div class="form-row">
                 <div class="form-group col">
-                  <input type="text" class="message-box form-control" placeholder="Message" />
+                  <input type="text" class="message-box form-control" placeholder="Message" required/>
                 </div>
               </div>
               <div class="btn_box">
-                <button>
+                <button id="msgBtn">
                   SEND
                 </button>
               </div>
@@ -507,6 +502,12 @@ Join us on this journey as we celebrate the diversity of musical expression and 
         }
       }
     });
+
+
+    const msgBtn = document.getElementById('msgBtn');
+    msgBtn.addEventListener('click', ()=> {
+      alert('Massage sent!!')
+    })
     </script>
 
   <!-- jQery -->
